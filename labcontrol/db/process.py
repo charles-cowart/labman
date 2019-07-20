@@ -4038,7 +4038,7 @@ class SequencingProcess(Process):
                 id = d['stub_lot_id']
                 d['stub_lot_id'] = reagent[id]['external_lot_id']
 
-                # refer to https://github.com/jdereus/labman/issues/324
+                # refer to https://github.com/jdereus/LabControl/issues/324
                 # for discussion on robot_id columns
                 id = d['gepmotion_robot_id']
                 epm_robot = equipment[id]['external_id']
@@ -4057,7 +4057,7 @@ class SequencingProcess(Process):
                 # for now, platform is hard-coded to 'Illumina'
                 # will need to change once Nanopore is supported by LC
                 # and we have a column to record one or the other.
-                # See also: https://github.com/jdereus/labman/issues/507
+                # See also: https://github.com/jdereus/LabControl/issues/507
                 d['platform'] = 'Illumina'
 
                 # these key/value pairs are tentatively hard-coded for now.
